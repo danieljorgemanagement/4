@@ -1,0 +1,41 @@
+---
+import Container from '../Container.astro';
+---
+
+<section
+  id="Hero"
+  class="relative grid place-items-center bg-gradient-to-br from-black/80 to-black"
+  style="height: 100dvh;"
+>
+  <!-- <img
+    src="https://img.freepik.com/foto-gratis/ingeniero-civil-gerente-trabajadores-construccion-tableta-digital-planos-hablando-planeando-sobre-sitio-construccion-concepto-trabajo-equipo-cooperacion_640221-156.jpg?w=1380&t=st=1701345860~exp=1701346460~hmac=65ae890830e657b38e1a8cc67cdb3c867a7d43d4fc810ee024a9a18d29439f13"
+    class="w-full h-full object-cover absolute top-0 brightness-50"
+    alt=""
+  /> -->
+  <Container>
+    <div class="md:flex justify-center items-center my-auto">
+      <div class="max-w-[500px]">
+        <h1
+          class="bg-gradient-to-br from-[#FFFFFF] to-[#B9B9B9] bg-clip-text text-transparent text-7xl mb-6 font-semibold max-md:text-center"
+          style="text-wrap: balance;"
+        >
+          Empower your American dreams with Zion Titles
+        </h1>
+        <a
+          href="#Footer"
+          class="rounded text-black/90 text-lg font-medium hover:scale-105 transition bg-gradient-to-br from-white/60 to-white px-6 py-3 mb-2 max-md:flex max-md:max-w-[80%] max-md:mx-auto text-center justify-center"
+          >Get a consultation</a
+        >
+      </div>
+      <div>
+        <img src="images/illustration.svg" alt="" />
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .radial-bg {
+    background-image: radial-gradient(circle, #ffd03a, #b57b00);
+  }
+</style>

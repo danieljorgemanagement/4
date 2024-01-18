@@ -1,0 +1,54 @@
+---
+import Container from '../Container.astro';
+
+const data = [
+  {
+    title: 'Title Services Planning',
+    description: 'Tailored strategies for a secure title future.',
+    logo: 'https://www.svgrepo.com/show/440659/schedule.svg',
+  },
+  {
+    title: 'Title Management',
+    description: 'Expertly grow and optimize your title investments.',
+    logo: 'https://www.svgrepo.com/show/512498/money-1182.svg',
+  },
+  {
+    title: 'Title Planning and Optimization',
+    description: 'Maximize efficiency through strategic title planning.',
+    logo: 'https://www.svgrepo.com/show/488064/bill.svg',
+  },
+];
+---
+
+<section id="Section" class="relative overflow-hidden bg-gradient-to-b from-black/80 to-black">
+  <Container>
+    <article class="relative z-10 flex flex-col items-center justify-center gap-10 py-32">
+      <div class="max-w-xl text-center text-white">
+        <h4 class="mb-4 font-sans text-6xl font-bold">Title Services</h4>
+        <p class="mt-4 text-white/80">
+          Explore our comprehensive range of title services designed to elevate your title well-being.
+        </p>
+        <p class="mt-2 text-white/80">
+          From expert title services planning to top-notch title management and strategic title planning, we offer
+          unparalleled excellence in crafting tailored title solutions to meet your unique needs.
+        </p>
+      </div>
+      <div class="grid gap-4 md:grid-cols-3 lg:gap-10">
+        {
+          data.map((itm) => (
+            <div class="flex flex-col items-center justify-center h-full p-8 mx-auto bg-white/20 backdrop-blur aspect-square rounded-2xl max-w-[240px]">
+              <header class="mt-2 mb-4 text-center">
+                <h6 class="text-xl font-semibold leading-5 text-white">{itm.title}</h6>
+                <h6 class="mt-1 text-sm leading-4 text-center text-white/60">{itm.description}</h6>
+              </header>
+              <div class="w-[5rem] h-20">
+                <img class="w-full h-full invert" src={itm.logo} alt="" />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </article>
+  </Container>
+  <style></style>
+</section>

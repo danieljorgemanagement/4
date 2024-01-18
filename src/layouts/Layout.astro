@@ -1,0 +1,95 @@
+---
+import AppFooter from '../components/AppFooter.astro';
+import AppHeader from '../components/AppHeader.astro';
+import 'aos/dist/aos.css';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://res.cloudinary.com/dprlq5xzn/image/upload/v1705553305/ZION_TITLE_cxcllf.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Landing Page | Zion" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="bg-gray-50 sm:overflow-x-hidden min-w-[340px]">
+    <script>
+      import { aosInit } from '../utils/aos';
+      aosInit();
+    </script>
+
+    <AppHeader />
+    <slot />
+    <AppFooter />
+  </body>
+</html>
+
+<style>
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  body,
+  .scroll-custom {
+    --scrollbar-border-thickness: 0px;
+    --scrollbar-thumb-color: #ffffff2b;
+    --scrollbar-track-color: #a1a1aa00;
+    --scrollbar-height: 8px;
+    --scrollbar-width: 8px;
+    --scrollbar-corner-color: #ffffff00;
+    --scrollbar-border-color: #ffffff00;
+  }
+  body::-webkit-scrollbar,
+  .scroll-custom::-webkit-scrollbar {
+    width: var(--scrollbar-width, 20px);
+    height: var(--scrollbar-height, 20px);
+  }
+  body::-webkit-scrollbar-thumb,
+  .scroll-custom::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color, #3b82f6);
+    border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255));
+    border-radius: var(--scrollbar-border-radius, 4px);
+  }
+  body::-webkit-scrollbar-track,
+  .scroll-custom::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color, #a1a1aa);
+  }
+  body::-webkit-scrollbar-corner,
+  .scroll-custom::-webkit-scrollbar-corner {
+    background: var(--scrollbar-corner-color, #ffffff);
+    border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255));
+    border-radius: var(--scrollbar-border-radius, 4px);
+  }
+  body::-webkit-scrollbar-button:vertical:start:increment,
+  .scroll-custom::-webkit-scrollbar-button:vertical:start:increment,
+  #preview::-webkit-scrollbar-button:vertical:end:decrement,
+  #preview::-webkit-scrollbar-button:horizontal:start:increment,
+  #preview::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: var(--show-double-buttons, none);
+  }
+  @font-face {
+    font-family: 'ALBRA';
+    src: url('/fonts/AlbraDisplay.otf');
+  }
+</style>
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+</style>
