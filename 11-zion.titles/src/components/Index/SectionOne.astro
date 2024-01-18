@@ -2,7 +2,7 @@
 import Container from '../Container.astro';
 ---
 
-<section id="Welcome" class="relative py-16 md:py-28 lg:py-36 bg-[#E6E7EB] min-h-[900px]">
+<section id="Welcome" class="relative py-t6 md:pt-28 lg:pt-36 bg-[#E6E7EB]">
   <!-- <img
     src="images/face.svg"
     alt=""
@@ -10,8 +10,8 @@ import Container from '../Container.astro';
   /> -->
 
   <Container>
-    <div class="flex max-lg:flex-col-reverse">
-      <div class="relative z-10 lg:w-2/4 max-md:pb-[340px] text-black/50">
+    <div class="flex max-lg:flex-col max-lg:gap-20">
+      <div class="relative z-10 max-w-xl mx-auto w-fit text-black/50 lg:mb-10">
         <h3
           class="text-7xl font-bold font-sans max-lg:text-center max-lg:mx-auto bg-gradient-to-br from-black/50 to-black bg-clip-text text-transparent"
         >
@@ -39,8 +39,12 @@ import Container from '../Container.astro';
           >
         </div>
       </div>
-      <div class="m-auto">
-        <img src="images/face.svg" class="m-auto" alt="" />
+      <div class="flex items-end">
+        <img
+          src="https://res.cloudinary.com/dprlq5xzn/image/upload/v1705594795/attractive_man_standing_alone_on_transparent_background_looking_joyful_g_1_3_1_1_ij9txk_1af4b2.png"
+          class="w-[90%]"
+          alt=""
+        />
       </div>
     </div>
   </Container>
